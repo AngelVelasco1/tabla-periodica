@@ -1,0 +1,247 @@
+:root {
+    --yellow: #ffda5f;
+    --pink: #fc4994;
+    --blue: #4dc9ff;
+    --green: #55ff5d;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --red: #ff3c3c;
+    --orange: #ffa155;
+    --purple: #9859b6;
+    --lightblue: #41ffdf;
+    --bg-color: #000116;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: 'Roboto Mono', monospace;;   
+    color: var(--white);
+}
+    h1, h2 {
+        color: var(--white);
+        margin: 0;
+        text-align: center;
+    }
+    h1 {
+        margin-block-start: 40px;
+        text-transform: uppercase;
+        font-size: 28px;
+    }
+    h2 {
+
+        font-size: 20px;
+    }
+   
+.periodic-table {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.group {
+    margin:  0px 0px;
+}
+.element {
+    width: 100px;
+    height: 100px;
+    margin: 10px 5px;
+    transition: 0.35s ease-in-out;
+    cursor: pointer;
+}
+.element:hover {
+    transform: scale(1.1);
+    color: var(--white);
+    
+}
+.number {
+    text-align: end;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.symbol {
+    font-size: 28px ;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+.name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-left: 5px;
+
+}
+.description {
+    color: var(--white);
+    max-inline-size: 250px;
+    font-size: 0.9rem;
+    margin-inline-end: 5px;
+    margin-inline-start: 10px;
+}
+
+
+.symbology {
+    width: 350px;
+     margin: 0 auto;
+     padding: 0;
+     position: relative;
+     top: 160px;
+     left: 60px;
+}
+.category {
+    display: inline-block;
+    vertical-align:middle;
+}
+.item {
+    margin: 10px 0px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    transition: 0.35s ease-in-out;
+}
+.item:nth-child(1) {
+    margin-right: 140px;
+}
+.item {
+    cursor: pointer;
+}
+.text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;;
+    color: var(--white);
+    margin-top: -3px;
+    margin-left: 25px;
+}
+/* Colours */
+.mechanical {
+    border: 4px solid var(--red);
+    color: var(--red);
+}
+.object-oriented {
+    border: 4px solid var(--orange);
+    color: var(--orange);
+}
+.imperative  {
+    border: 4px solid var(--yellow);
+    color: var(--yellow)
+}
+.concurrent {
+    border: 4px solid var(--white);
+    color: var(--white)
+}
+.multi {
+    border: 4px solid var(--lightblue);
+    color: var(--lightblue);
+}
+.declarative {
+    border: 4px solid var(--purple);
+    color: var(--purple);
+}
+.scripting {
+    border: 4px solid var(--green);
+    color: var(--green)
+}
+.dynamic {
+    border: 4px solid var(--pink);
+    color: var(--pink)
+}
+.funtional {
+    border: 4px solid var(--blue);
+    color:  var(--blue)
+}
+.mechanical:hover {
+    background-color: var(--red);
+}
+.object-oriented:hover {
+    background-color: var(--orange);
+}
+.imperative:hover {
+    background-color: var(--yellow);
+}
+.concurrent:hover {
+    background-color: var(--white);
+    color: var(--black)
+}
+.multi:hover {
+    background-color: var(--lightblue);
+}
+.declarative:hover {
+    background-color: var(--purple);
+}
+.scripting:hover {
+    background-color: var(--green);
+}
+.dynamic:hover {
+    background-color: var(--pink);
+}
+.funtional:hover {
+    background-color: var(--blue);
+}
+
+
+
+@media screen and (max-width: 1330px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .periodic-table {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        margin: 0;
+        padding: 0;
+        justify-items: center;
+        align-items: center;
+        margin-block-start: 200px;
+    }
+    .symbology {
+        width: 85%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .description {
+        display: none;
+    }
+}
+@media screen and (max-width: 700px){
+    .periodic-table {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 600px){
+    .periodic-table {
+        grid-template-columns: 1fr;
+    }
+    .element {
+        width: 150px;
+        height: 150px;
+    }
+    .number {
+        font-size: 20px
+    }
+    .symbol {
+        font-size: 42px ;
+    }
+    .name {
+        font-size: 18px;
+    }
+}
